@@ -195,3 +195,193 @@ body {
 .modal a:hover {
     text-decoration: underline;
 }
+
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#searchInput {
+    width: 100%;
+    margin: 0 15px;
+}
+
+#genderFilter, #addTeacherBtn {
+    margin: 0 15px;
+}
+
+.controls input,
+.controls select,
+.controls button {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.controls button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #2980b9;
+}
+
+.teachers-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.teacher-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teacher-info {
+    flex: 1;
+}
+
+.teacher-actions button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.teacher-actions button.manage-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.teacher-actions button.manage-btn:hover {
+    background-color: #27ae60;
+}
+
+.workload-form {
+    margin-bottom: 2rem;
+}
+
+.workload-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.workload-item input {
+    width: 100px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.modal-actions button.danger {
+    background-color: #e74c3c;
+}
+
+.modal-actions button.danger:hover {
+    background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 20px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .news-card {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .nav {
+        gap: 0.8rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .news-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .details-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav {
+        gap: 0.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .news-card {
+        padding: 0.8rem;
+    }
+}
