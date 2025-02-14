@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система контроля нагрузки преподавателей</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Учебная Нагрузка</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Главная</a>
+                <a href="manage.html" class="nav-link">Управление нагрузкой</a>
+                <a href="#" class="nav-link" id="authLink">Войти/Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="news-section">
+            <h2 class="section-title">Последние новости ВУЗа</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <h3>Обновление регламента учебной нагрузки</h3>
+                    <p>Утверждены новые правила распределения академической нагрузки на 2024 учебный год</p>
+                    <button class="details-btn">Подробнее</button>
+                </article>
+                <article class="news-card">
+                    <h3>Внедрение новой системы отчетности</h3>
+                    <p>С 1 сентября все преподаватели переходят на электронную систему формирования отчетов</p>
+                    <button class="details-btn">Подробнее</button>
+                </article>
+                <article class="news-card">
+                    <h3>Семинар по цифровизации образования</h3>
+                    <p>Приглашаем всех преподавателей на обучающий семинар 15 октября</p>
+                    <button class="details-btn">Подробнее</button>
+                </article>
+                <article class="news-card">
+                    <h3>Обновление методических материалов</h3>
+                    <p>Доступны новые версии учебных пособий в электронной библиотеке</p>
+                    <button class="details-btn">Подробнее</button>
+                </article>
+                <article class="news-card">
+                    <h3>Оптимизация рабочих процессов</h3>
+                    <p>Внедрены новые инструменты для автоматизации административных задач</p>
+                    <button class="details-btn">Подробнее</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Система контроля учебной нагрузки. Все права защищены.</p>
+    </footer>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход в систему</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+            <p>Нет аккаунта? <a href="#" id="showRegister">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="ФИО" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <input type="password" placeholder="Подтвердите пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <p>Уже есть аккаунт? <a href="#" id="showLogin">Войти</a></p>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

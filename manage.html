@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система контроля нагрузки преподавателей</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Учебная Нагрузка</div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="manage.html" class="nav-link active">Управление нагрузкой</a>
+                <a href="#" class="nav-link" id="authLink">Войти/Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Поиск по ФИО">
+                <select id="genderFilter">
+                    <option value="">Все</option>
+                    <option value="Мужской">Мужской</option>
+                    <option value="Женский">Женский</option>
+                </select>
+                <button id="addTeacherBtn">Добавить преподавателя</button>
+            </div>
+
+            <div class="teachers-list" id="teachersList"></div>
+        </div>
+    </main>
+
+    <div id="addTeacherModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Добавить преподавателя</h2>
+            <form id="addTeacherForm">
+                <input type="text" id="teacherName" placeholder="ФИО" required>
+                <select id="teacherGender" required>
+                    <option value="">Выберите пол</option>
+                    <option value="Мужской">Мужской</option>
+                    <option value="Женский">Женский</option>
+                </select>
+                <input type="number" id="teacherAge" placeholder="Возраст" required min="18" max="100">
+                <button type="submit">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="manageWorkloadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Управление нагрузкой</h2>
+            <h4 style="margin-bottom: 20px;">Укажите кол-во часов для преподавателя по каждой из дисциплин</h2>
+            <div class="workload-form" id="workloadForm"></div>
+            <div class="modal-actions">
+                <button id="saveWorkloadBtn">Принять</button>
+                <button id="fireTeacherBtn" class="danger">Уволить</button>
+                <button id="cancelWorkloadBtn">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Система контроля учебной нагрузки. Все права защищены.</p>
+    </footer>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход в систему</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+            <p>Нет аккаунта? <a href="#" id="showRegister">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="ФИО" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <input type="password" placeholder="Подтвердите пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <p>Уже есть аккаунт? <a href="#" id="showLogin">Войти</a></p>
+        </div>
+    </div>
+    <script src="js.js"></script>
+    <script src="manage.js"></script>
+</body>
+</html>
